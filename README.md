@@ -85,16 +85,16 @@ find . -type f -exec ls -s {} ; | sort -n | head -10
 
 // find ищет все файлы, ls -s выводит информацию о них, sort -n сортирует по размеру, head -10 выводит топ 10
 
-*./boost_out/include/boost/accumulators/accumulators.hpp
-*./boost_out/include/boost/accumulators/framework/accumulator_base.hpp
-*./boost_out/include/boost/accumulators/framework/accumulator_concept.hpp
-*./boost_out/include/boost/accumulators/framework/accumulators/external_accumulator.hpp
-*./boost_out/include/boost/accumulators/framework/accumulators/reference_accumulator.hpp
-*./boost_out/include/boost/accumulators/framework/accumulators/value_accumulator.hpp
-*./boost_out/include/boost/accumulators/framework/external.hpp
-*./boost_out/include/boost/accumulators/framework/features.hpp
-*./boost_out/include/boost/accumulators/framework/parameters/accumulator.hpp
-*./boost_out/include/boost/accumulators/framework/parameters/sample.hpp
+* ./boost_out/include/boost/accumulators/accumulators.hpp
+* ./boost_out/include/boost/accumulators/framework/accumulator_base.hpp
+* ./boost_out/include/boost/accumulators/framework/accumulator_concept.hpp
+* ./boost_out/include/boost/accumulators/framework/accumulators/external_accumulator.hpp
+* ./boost_out/include/boost/accumulators/framework/accumulators/reference_accumulator.hpp
+* ./boost_out/include/boost/accumulators/framework/accumulators/value_accumulator.hpp
+* ./boost_out/include/boost/accumulators/framework/external.hpp
+* ./boost_out/include/boost/accumulators/framework/features.hpp
+* ./boost_out/include/boost/accumulators/framework/parameters/accumulator.hpp
+* ./boost_out/include/boost/accumulators/framework/parameters/sample.hpp
 
 
 
