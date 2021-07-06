@@ -25,16 +25,17 @@ ind ./ -not -name ".h" -not -name ".cpp"|wc
 > 6.Найдите полный пусть до файла any.hpp внутри библиотеки boost.
 
 find ./ -name "any.hpp"
-./boost/any.hpp
-./boost/spirit/home/support/algorithm/any.hpp
-./boost/proto/detail/any.hpp
-./boost/hana/any.hpp
-./boost/hana/fwd/any.hpp
-./boost/xpressive/detail/utility/any.hpp
-./boost/type_erasure/any.hpp
-./boost/fusion/algorithm/query/any.hpp
-./boost/fusion/algorithm/query/detail/any.hpp
-./boost/fusion/include/any.hpp
+
+* ./boost/any.hpp
+* ./boost/spirit/home/support/algorithm/any.hpp
+* ./boost/proto/detail/any.hpp
+* ./boost/hana/any.hpp
+* ./boost/hana/fwd/any.hpp
+* ./boost/xpressive/detail/utility/any.hpp
+* ./boost/type_erasure/any.hpp
+* ./boost/fusion/algorithm/query/any.hpp
+* ./boost/fusion/algorithm/query/detail/any.hpp
+* ./boost/fusion/include/any.hpp
 
 > 7.Выведите в консоль все файлы, где упоминается последовательность boost::asio.
 
