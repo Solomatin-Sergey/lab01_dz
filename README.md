@@ -14,7 +14,7 @@ find . -maxdepth 1|wc
 
 на выходе: 19 19 209
 
-// -maxdepth - максимальная глубина поиска (в данном случае текущая директория)
+// -maxdepth - максимальная глубина поиска (в данном случае текущая директория);
 
 // 19 - это включая саму директорию, поэтому всего 18.
 
@@ -22,13 +22,27 @@ find . -maxdepth 1|wc
 
 find ./ |wc
 
+на выходе: 66829 66832 3286648
+
+// по аналогии с предыдущим в итоге 66829 файлов
+
 > 5.Подсчитайте количество заголовочных файлов, файлов с расширением .cpp, сколько остальных файлов (не заголовочных и не .cpp).
 
 find ./ -name ".h" |wc
-find ./ -name ".cpp" |wc
-ind ./ -not -name ".h" -not -name ".cpp"|wc
 
-> 6.Найдите полный пусть до файла any.hpp внутри библиотеки boost.
+на выходе: 296 296 11738
+
+find ./ -name ".cpp" |wc
+
+на выходе: 13774 13774 647953
+
+find ./ -not -name ".h" -not -name ".cpp"|wc
+
+на выходе: 52759 52762 2626957
+
+// Таким образом, ответы: 296, 13774, 52759.
+
+> 6.Найдите полный путь до файла any.hpp внутри библиотеки boost.
 
 find ./ -name "any.hpp"
 
@@ -47,6 +61,8 @@ find ./ -name "any.hpp"
 
 grep -r "boost::asio" ./
 
+на выходе: выводится огромный список файлов с последовательностью boost::asio.
+
 > 8.Скомпилирутйе boost. Можно воспользоваться инструкцией или ссылкой.
 
 ./bootstrap.sh --prefix=boost_output
@@ -61,9 +77,25 @@ mv boost_output/ ~/boost-libs/
 
 ls -Rgh
 
+на выходе: появляется 67 тысяч строк со всеми файлами в текущей директории
+
 > 11.Найдите топ10 самых "тяжёлых".
 
 find . -type f -exec ls -s {} ; | sort -n | head -10
+
+// find ищет все файлы, ls -s выводит информацию о них, sort -n сортирует по размеру, head -10 выводит топ 10
+
+*./boost_out/include/boost/accumulators/accumulators.hpp
+*./boost_out/include/boost/accumulators/framework/accumulator_base.hpp
+*./boost_out/include/boost/accumulators/framework/accumulator_concept.hpp
+*./boost_out/include/boost/accumulators/framework/accumulators/external_accumulator.hpp
+*./boost_out/include/boost/accumulators/framework/accumulators/reference_accumulator.hpp
+*./boost_out/include/boost/accumulators/framework/accumulators/value_accumulator.hpp
+*./boost_out/include/boost/accumulators/framework/external.hpp
+*./boost_out/include/boost/accumulators/framework/features.hpp
+*./boost_out/include/boost/accumulators/framework/parameters/accumulator.hpp
+*./boost_out/include/boost/accumulators/framework/parameters/sample.hpp
+
 
 
 
